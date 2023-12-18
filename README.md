@@ -69,6 +69,18 @@ This project is a Restaurant table reservation application tailored for Halifax,
 
 5. **APIs:** Utilizing Amazon API Gateway to effectively handle RESTful APIs.
 
+
+## Data Storage and Security:
+1. **Reservation Data Security**: Google Firestore securely stores reservation data, employing role-based access control for data protection.
+2. **Encryption for PII**: Personally Identifiable Information (PII) is encrypted, ensuring robust security measures.
+3. **Secure User Authentication**: Firebase Authentication is implemented to ensure secure user access and authentication.
+
+## Development Workflow and Practices:
+1. **Version Control**: Collaborative development is facilitated through version control systems like Git, enabling efficient teamwork and code management.
+2. **CI/CD Pipelines**: Utilizing Continuous Integration/Continuous Deployment (CI/CD) pipelines for seamless and automated deployment in stages, streamlining the development process.
+3. **Agile software development**: Regular commits to Git repositories on a weekly basis. Sprint duration is 4 weeks. 
+
+
 ## Feature Components/Modules:
 High-level overview of the various feature components categorized under the respective user applications, outlining different sprints for task completion.
 
@@ -151,52 +163,67 @@ High-level overview of the various feature components categorized under the resp
     * The top 10 periods when the food is most ordered
     * Reviews filtered based on restaurant names
 
-## Data Storage and Security:
-1. **Reservation Data Security**: Google Firestore securely stores reservation data, employing role-based access control for data protection.
-2. **Encryption for PII**: Personally Identifiable Information (PII) is encrypted, ensuring robust security measures.
-3. **Secure User Authentication**: Firebase Authentication is implemented to ensure secure user access and authentication.
-
-## Development Workflow and Practices:
-1. **Version Control**: Collaborative development is facilitated through version control systems like Git, enabling efficient teamwork and code management.
-2. **CI/CD Pipelines**: Utilizing Continuous Integration/Continuous Deployment (CI/CD) pipelines for seamless and automated deployment in stages, streamlining the development process.
-3. **Agile software development**: Regular commits to Git repositories on a weekly basis. Sprint duration is 4 weeks. 
-
 ## Application RoadMap (Flowcharts)
 #### 1. User Authentication 
+
 ![User Authentication-1](/image-assets/user-authentication_1.jpg)
+
 _Figure : Sign Up Flow_
 
 ![User Authentication-2](/image-assets/user-authentication_2.jpg)
+
 _Figure : Sign In Flow_
 
 ![User Authentication-3](/image-assets/user-authentication_3.jpg)
+
 _Figure : Change password flow_
 
 ![User Authentication-4](/image-assets/user-authentication_4.jpg)
+
 _Figure : Delete Account Flow_
 
 ![User Authentication-5](/image-assets/user-authentication_5.jpg)
+
 _Figure : Reset Password Flow_
 
 ![User Authentication-6](/image-assets/user-authentication_6.jpg)
+
 _Figure : Google Sign In Flow_
+
 #### 2. List of Restaurants
+
 ![List of Restaurants-1](/image-assets/list-restaurant.png)
+
 _Figure : View all restaurants and a restaurant homepage – flowchart_
+
 #### 3. Book, Edit, Delete View Reservation
+
 ![Book, Edit, Delete View Reservation-1](/image-assets/reserve-table.png)
+
 _Figure : reserve table flowchart_
+
 #### 4. Edit, Delete, View Menu 
+
 ![Edit, Delete, View Menu-1](/image-assets/edit-restaurant.png)
+
 _Figure : Edit restaurant, menu items functionality & image upload flow chart_
+
 #### 5. Add, Remove menu-items 
+
 ![Add, Remove menu-items-1](/image-assets/add-menu-item.png)
+
 _Figure : Add menu item flowchart_
+
 #### 6. Chatbot
+
 ![Chatbot-1](/image-assets/chatbot.jpg)
+
 _Figure : Chatbot flowchart_
+
 #### 7. Visualization
+
 ![visualisation-1](/image-assets/visualisation.png)
+
 _Figure : Visualization flowchart_
 
 ---
