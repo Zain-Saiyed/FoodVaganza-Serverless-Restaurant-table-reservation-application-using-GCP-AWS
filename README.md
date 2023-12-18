@@ -2,7 +2,7 @@
 
 A serverless Restaurant Table Reservation App for Halifax restaurants, on cloud using GCP & AWS services, for scalability, security, and cost-efficiency. Featuring Customer, Partner, and Admin apps with modules for Sign Up & Login, Reservations, Chatbot, and innovative components like dual deployment, email notifications, and regular data refresh.
 
-Cloud Deployment Model: **Multi-Cloud**
+Cloud Deployment Model: **Multi-Cloud** [AWS, GCP]
 
 ## Technology Used:
 ### Cloud Providers:
@@ -53,92 +53,103 @@ This project is a Restaurant table reservation application tailored for Halifax,
 3. **Admin App:** Super **admins** will utilize this application to oversee and analyze the overall usage and performance of the platform.
 
 ## Essential Layers:
+
 1. **Frontend:** Developed using React, Vite, and Chakra UI to create a responsive and visually appealing web application.
+
 2. **Backend Services:** Utilizing serverless solutions such as AWS Lambda, and GCP Cloud Functions for seamless and efficient tasks management.
+
 3. **Database:**  
+    a. **Dynamic Content** (GCP Firestore): Utilizing Firestore, a flexible NoSQL database provided by Google Cloud Platform, for managing dynamic content like real-time updates of restaurant and reservation data.
 
-  a. **Dynamic Content** (GCP Firestore): Utilizing Firestore, a flexible NoSQL database provided by Google Cloud Platform, for managing dynamic content like real-time updates of restaurant and reservation data.
+    b. **Structured Attribute Data Storage** (Amazon DynamoDB): Leverage Amazon DynamoDB to store attribute content related to menu items, customer reviews, and other structured data.
 
-  b. **Structured Attribute Data Storage** (Amazon DynamoDB): Leverage Amazon DynamoDB to store attribute content related to menu items, customer reviews, and other structured data.
-
-  c.**Media Storage** (Amazon S3): Store restaurant and menu images efficiently by utilizing Amazon S3 buckets, providing a reliable and scalable solution for media storage in the cloud.
+    c. **Media Storage** (Amazon S3): Store restaurant and menu images efficiently by utilizing Amazon S3 buckets, providing a reliable and scalable solution for media storage in the cloud.
 
 4. **Authentication:** Leveraging Firebase Authentication for user authentication purposes.
+
 5. **APIs:** Utilizing Amazon API Gateway to effectively handle RESTful APIs.
 
 ## Feature Components/Modules:
 High-level overview of the various feature components categorized under the respective user applications, outlining different sprints for task completion.
+
 ### Customer App 
 1. Sign Up & Login Module: 
-
-  * Using EmailID & Password
-  * Using Google Single Sign-On
+    * Using EmailID & Password
+    * Using Google Single Sign-On
 
 2. List of all Restaurants 
-  * View all restaurants filtered by opening and closing hours
-  * Display Restaurant homepage with all restaurant attributes
-  * View menu item details of restaurants on homepage 
-  * Display maximum discounted offer banner on restaurant pages.
+    * View all restaurants filtered by opening and closing hours
+    * Display Restaurant homepage with all restaurant attributes
+    * View menu item details of restaurants on homepage 
+    * Display maximum discounted offer banner on restaurant pages.
 
 3. Book, edit, delete, view a reservation
-  * Book a reservation based on restaurant's opening and closing hours
-  * View customer bookings
-  * Edit bookings (condition: allowed only 1 hour before the reservation time)
-  * Delete bookings (condition: allowed only 1 hour before the reservation time)
+    * Book a reservation based on restaurant's opening and closing hours
+    * View customer bookings
+    * Edit bookings (condition: allowed only 1 hour before the reservation time)
+    * Delete bookings (condition: allowed only 1 hour before the reservation time)
+
 4. Book, edit, delete, view menu for a reservation
-  * Display menu items based on its current availability in restaurant  
-  * Reserve a table without ordering any menu item from the restaurant menu
+    * Display menu items based on its current availability in restaurant  
+    * Reserve a table without ordering any menu item from the restaurant menu
+
 5. Chatbot
-  * Interact and display Restaurant availability time, location, menu availabiliy information.
-  * Display reservation availability.
-  * Submit review about restaurant and/or its menu items
-  * Book a reservation
+    * Interact and display Restaurant availability time, location, menu availabiliy information.
+    * Display reservation availability.
+    * Submit review about restaurant and/or its menu items
+    * Book a reservation
+
 6. Notifications
-  * Notify customer when a new Restaurant is opened (condition: every 1 hour)
-  * Notify customer about successful reservation (condition: before 30 minutes of reservation time)
-  * Notify customer about menu item changes if any done by restaurant
-  * Notify customer about restaurant's closure due to special reasons.
+    * Notify customer when a new Restaurant is opened (condition: every 1 hour)
+    * Notify customer about successful reservation (condition: before 30 minutes of reservation time)
+    * Notify customer about menu item changes if any done by restaurant
+    * Notify customer about restaurant's closure due to special reasons.
 
 ### Partner App
 1. Sign Up & Login Module
-  * Using EmailID & Password
-  * Using Google Single Sign-On
+    * Using EmailID & Password
+    * Using Google Single Sign-On
+
 2. Restaurant details and add, view and edit menu items
-  * Add/Create a new restarant under Partner
-  * Add restaurant availability, open time, close time, reservation table capacity, and other restaurant attributes.
-  * Edit existing restaurant attributes. 
-  * Declare open or closed status of restaurant by partner
-  * Upload and update image of Restaurant banner & Menu items
-  * Edit and Delete menu item attributes
-  * Provide/Apply offers at restaurant level or menu-item level. 
-  * Apply menu-item specific discount percentage
-  * Display offer type specific slashed prices for each menu item.
+    * Add/Create a new restarant under Partner
+    * Add restaurant availability, open time, close time, reservation table capacity, and other restaurant attributes.
+    * Edit existing restaurant attributes. 
+    * Declare open or closed status of restaurant by partner
+    * Upload and update image of Restaurant banner & Menu items
+    * Edit and Delete menu item attributes
+    * Provide/Apply offers at restaurant level or menu-item level. 
+    * Apply menu-item specific discount percentage
+    * Display offer type specific slashed prices for each menu item.
+
 3. View, edit, and delete a reservation
-  * View bookings made by customer
-  * Edit or delete bookings (condition: 1 hour before reservation time)
-  * Approve/Reject reservation
+    * View bookings made by customer
+    * Edit or delete bookings (condition: 1 hour before reservation time)
+    * Approve/Reject reservation
+
 4. Holistic View
-  * View number of tables booked in intervals daily, weekly, and monthly views
+    * View number of tables booked in intervals daily, weekly, and monthly views
+
 5. Chatbot
-  * Get booking information for day/week/month, open time, and other restaurant atributes.
-  * Edit restaurant level attributes
-  * Read ratings, cancel or edit a reservation with menu items.
+    * Get booking information for day/week/month, open time, and other restaurant atributes.
+    * Edit restaurant level attributes
+    * Read ratings, cancel or edit a reservation with menu items.
+
 6. Notifications
-  * Notify about new reservations booked, modified or deleted
-  * Notify about reservations booked with menu item (condition: before 1 hour of reservation time) 
-  * Notify if tables are overbooked and notify top 3 menu items mostly nooked every 4 hours
+    * Notify about new reservations booked, modified or deleted
+    * Notify about reservations booked with menu item (condition: before 1 hour of reservation time) 
+    * Notify if tables are overbooked and notify top 3 menu items mostly nooked every 4 hours
 
 ### Admin App
 1. Login Module
-  * Using EmailID & Password
-  * Using Google Single Sign-On
+    * Using EmailID & Password
+    * Using Google Single Sign-On
 2. Visualisations:
-  * Statistic Views
-  * The top 10 food items ordered across restaurants
-  * The top 10 restaurants that have the most orders
-  * The top 10 customers who have ordered the most
-  * The top 10 periods when the food is most ordered
-  * Reviews filtered based on restaurant names
+    * Statistic Views
+    * The top 10 food items ordered across restaurants
+    * The top 10 restaurants that have the most orders
+    * The top 10 customers who have ordered the most
+    * The top 10 periods when the food is most ordered
+    * Reviews filtered based on restaurant names
 
 ## Data Storage and Security:
 1. **Reservation Data Security**: Google Firestore securely stores reservation data, employing role-based access control for data protection.
