@@ -41,7 +41,7 @@ Cloud Deployment Model: **Multi-Cloud**
 ![NPM-Package Manager](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 ## Application Archietcture:
-![Application Architecture](/images/application-architecture.png)
+![Application Architecture](/image-assets/application-architecture.png)
 
 
 ## Overview:
@@ -49,16 +49,20 @@ This project is a Restaurant table reservation application tailored for Halifax,
 
 ## Application Components:
 1. **Customer App:** This application is designed for **customers** to view restaurant information, its menu items, and reserve tables at restaurants.
-2. **Partner App:** Restaurants Owners/Partners will utilize this application to manage restaurant and menu item attributes, and access their table reservtions/booking information.
+2. **Partner App:** Restaurants **Owners/Partners** will utilize this application to manage restaurant and menu item attributes, and access their table reservtions/booking information.
 3. **Admin App:** Super **admins** will utilize this application to oversee and analyze the overall usage and performance of the platform.
 
 ## Essential Layers:
 1. **Frontend:** Developed using React, Vite, and Chakra UI to create a responsive and visually appealing web application.
 2. **Backend Services:** Utilizing serverless solutions such as AWS Lambda, and GCP Cloud Functions for seamless and efficient tasks management.
 3. **Database:**  
+
   a. **Dynamic Content** (GCP Firestore): Utilizing Firestore, a flexible NoSQL database provided by Google Cloud Platform, for managing dynamic content like real-time updates of restaurant and reservation data.
+
   b. **Structured Attribute Data Storage** (Amazon DynamoDB): Leverage Amazon DynamoDB to store attribute content related to menu items, customer reviews, and other structured data.
+
   c.**Media Storage** (Amazon S3): Store restaurant and menu images efficiently by utilizing Amazon S3 buckets, providing a reliable and scalable solution for media storage in the cloud.
+
 4. **Authentication:** Leveraging Firebase Authentication for user authentication purposes.
 5. **APIs:** Utilizing Amazon API Gateway to effectively handle RESTful APIs.
 
@@ -66,72 +70,75 @@ This project is a Restaurant table reservation application tailored for Halifax,
 High-level overview of the various feature components categorized under the respective user applications, outlining different sprints for task completion.
 ### Customer App 
 1. Sign Up & Login Module: 
-  a. Using EmailID & Password
-  b. Using Google Single Sign-On
+
+  * Using EmailID & Password
+  * Using Google Single Sign-On
+
 2. List of all Restaurants 
-  a. View all restaurants filtered by opening and closing hours
-  b. Display Restaurant homepage with all restaurant attributes
-  c. View menu item details of restaurants on homepage 
-  d. Display maximum discounted offer banner on restaurant pages.
+  * View all restaurants filtered by opening and closing hours
+  * Display Restaurant homepage with all restaurant attributes
+  * View menu item details of restaurants on homepage 
+  * Display maximum discounted offer banner on restaurant pages.
+
 3. Book, edit, delete, view a reservation
-  a. Book a reservation based on restaurant's opening and closing hours
-  b. View customer bookings
-  c. Edit bookings (condition: allowed only 1 hour before the reservation time)
-  d. Delete bookings (condition: allowed only 1 hour before the reservation time)
+  * Book a reservation based on restaurant's opening and closing hours
+  * View customer bookings
+  * Edit bookings (condition: allowed only 1 hour before the reservation time)
+  * Delete bookings (condition: allowed only 1 hour before the reservation time)
 4. Book, edit, delete, view menu for a reservation
-  a. Display menu items based on its current availability in restaurant  
-  b. Reserve a table without ordering any menu item from the restaurant menu
+  * Display menu items based on its current availability in restaurant  
+  * Reserve a table without ordering any menu item from the restaurant menu
 5. Chatbot
-  a. Interact and display Restaurant availability time, location, menu availabiliy information.
-  b. Display reservation availability.
-  c. Submit review about restaurant and/or its menu items
-  d. Book a reservation
+  * Interact and display Restaurant availability time, location, menu availabiliy information.
+  * Display reservation availability.
+  * Submit review about restaurant and/or its menu items
+  * Book a reservation
 6. Notifications
-  a. Notify customer when a new Restaurant is opened (condition: every 1 hour)
-  b. Notify customer about successful reservation (condition: before 30 minutes of reservation time)
-  c. Notify customer about menu item changes if any done by restaurant
-  d. Notify customer about restaurant's closure due to special reasons.
+  * Notify customer when a new Restaurant is opened (condition: every 1 hour)
+  * Notify customer about successful reservation (condition: before 30 minutes of reservation time)
+  * Notify customer about menu item changes if any done by restaurant
+  * Notify customer about restaurant's closure due to special reasons.
 
 ### Partner App
 1. Sign Up & Login Module
-  a. Using EmailID & Password
-  b. Using Google Single Sign-On
+  * Using EmailID & Password
+  * Using Google Single Sign-On
 2. Restaurant details and add, view and edit menu items
-  a. Add/Create a new restarant under Partner
-  b. Add restaurant availability, open time, close time, reservation table capacity, and other restaurant attributes.
-  c. Edit existing restaurant attributes. 
-  d. Declare open or closed status of restaurant by partner
-  e. Upload and update image of Restaurant banner & Menu items
-  f. Edit and Delete menu item attributes
-  g. Provide/Apply offers at restaurant level or menu-item level. 
-  h. Apply menu-item specific discount percentage
-  i. Display offer type specific slashed prices for each menu item.
+  * Add/Create a new restarant under Partner
+  * Add restaurant availability, open time, close time, reservation table capacity, and other restaurant attributes.
+  * Edit existing restaurant attributes. 
+  * Declare open or closed status of restaurant by partner
+  * Upload and update image of Restaurant banner & Menu items
+  * Edit and Delete menu item attributes
+  * Provide/Apply offers at restaurant level or menu-item level. 
+  * Apply menu-item specific discount percentage
+  * Display offer type specific slashed prices for each menu item.
 3. View, edit, and delete a reservation
-  a. View bookings made by customer
-  b. Edit or delete bookings (condition: 1 hour before reservation time)
-  c. Approve/Reject reservation
+  * View bookings made by customer
+  * Edit or delete bookings (condition: 1 hour before reservation time)
+  * Approve/Reject reservation
 4. Holistic View
-  a. View number of tables booked in intervals daily, weekly, and monthly views
+  * View number of tables booked in intervals daily, weekly, and monthly views
 5. Chatbot
-  a. Get booking information for day/week/month, open time, and other restaurant atributes.
-  b. Edit restaurant level attributes
-  c. Read ratings, cancel or edit a reservation with menu items.
+  * Get booking information for day/week/month, open time, and other restaurant atributes.
+  * Edit restaurant level attributes
+  * Read ratings, cancel or edit a reservation with menu items.
 6. Notifications
-  a. Notify about new reservations booked, modified or deleted
-  b. Notify about reservations booked with menu item (condition: before 1 hour of reservation time) 
-  c. Notify if tables are overbooked and notify top 3 menu items mostly nooked every 4 hours
+  * Notify about new reservations booked, modified or deleted
+  * Notify about reservations booked with menu item (condition: before 1 hour of reservation time) 
+  * Notify if tables are overbooked and notify top 3 menu items mostly nooked every 4 hours
 
 ### Admin App
 1. Login Module
-  a. Using EmailID & Password
-  b. Using Google Single Sign-On
+  * Using EmailID & Password
+  * Using Google Single Sign-On
 2. Visualisations:
-  a. Statistic Views
-  b. The top 10 food items ordered across restaurants
-  c. The top 10 restaurants that have the most orders
-  d. The top 10 customers who have ordered the most
-  e. The top 10 periods when the food is most ordered
-  f. Reviews filtered based on restaurant names
+  * Statistic Views
+  * The top 10 food items ordered across restaurants
+  * The top 10 restaurants that have the most orders
+  * The top 10 customers who have ordered the most
+  * The top 10 periods when the food is most ordered
+  * Reviews filtered based on restaurant names
 
 ## Data Storage and Security:
 1. **Reservation Data Security**: Google Firestore securely stores reservation data, employing role-based access control for data protection.
@@ -145,40 +152,40 @@ High-level overview of the various feature components categorized under the resp
 
 ## Application RoadMap (Flowcharts)
 #### 1. User Authentication 
-![User Authentication-1](/images/user-authentication_1.jpg)
+![User Authentication-1](/image-assets/user-authentication_1.jpg)
 _Figure : Sign Up Flow_
 
-![User Authentication-2](/images/user-authentication_2.jpg)
+![User Authentication-2](/image-assets/user-authentication_2.jpg)
 _Figure : Sign In Flow_
 
-![User Authentication-3](/images/user-authentication_3.jpg)
+![User Authentication-3](/image-assets/user-authentication_3.jpg)
 _Figure : Change password flow_
 
-![User Authentication-4](/images/user-authentication_4.jpg)
+![User Authentication-4](/image-assets/user-authentication_4.jpg)
 _Figure : Delete Account Flow_
 
-![User Authentication-5](/images/user-authentication_5.jpg)
+![User Authentication-5](/image-assets/user-authentication_5.jpg)
 _Figure : Reset Password Flow_
 
-![User Authentication-6](/images/user-authentication_6.jpg)
+![User Authentication-6](/image-assets/user-authentication_6.jpg)
 _Figure : Google Sign In Flow_
 #### 2. List of Restaurants
-![List of Restaurants-1](/images/list-restaurant.png)
+![List of Restaurants-1](/image-assets/list-restaurant.png)
 _Figure : View all restaurants and a restaurant homepage – flowchart_
 #### 3. Book, Edit, Delete View Reservation
-![Book, Edit, Delete View Reservation-1](/images/reserve-table.png)
+![Book, Edit, Delete View Reservation-1](/image-assets/reserve-table.png)
 _Figure : reserve table flowchart_
 #### 4. Edit, Delete, View Menu 
-![Edit, Delete, View Menu-1](/images/edit-restaurant.png)
+![Edit, Delete, View Menu-1](/image-assets/edit-restaurant.png)
 _Figure : Edit restaurant, menu items functionality & image upload flow chart_
 #### 5. Add, Remove menu-items 
-![Add, Remove menu-items-1](/images/add-menu-item.png)
+![Add, Remove menu-items-1](/image-assets/add-menu-item.png)
 _Figure : Add menu item flowchart_
 #### 6. Chatbot
-![Chatbot-1](/images/chatbot.jpg)
+![Chatbot-1](/image-assets/chatbot.jpg)
 _Figure : Chatbot flowchart_
 #### 7. Visualization
-![visualisation-1](/images/visualisation.png)
+![visualisation-1](/image-assets/visualisation.png)
 _Figure : Visualization flowchart_
 
 ---
