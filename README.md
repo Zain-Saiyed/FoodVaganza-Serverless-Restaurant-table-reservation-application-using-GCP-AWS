@@ -4,6 +4,14 @@ A serverless Restaurant Table Reservation App for Halifax restaurants, on cloud 
 
 Cloud Deployment Model: **Multi-Cloud** [AWS, GCP]
 
+Deployment URL: 
+
+| Service       | Link                           |
+| ------------- | ------------------------------- |
+| CloudRun      | [https://foodvaganza-sdp8-np22x3otfa-ue.a.run.app/](https://foodvaganza-sdp8-np22x3otfa-ue.a.run.app/) |
+| Netlify       | [https://main--serverless-sdp8-production.netlify.app/](https://main--serverless-sdp8-production.netlify.app/) |
+
+
 ## Technology Used:
 ### Cloud Providers:
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
