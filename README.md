@@ -1,6 +1,6 @@
 # FoodVaganza - Serverless Restaurant table reservation application
 
-A serverless Restaurant Table Reservation App for Halifax restaurants, on cloud using GCP & AWS services, for scalability, security, and cost-efficiency. Featuring Customer, Partner, and Admin apps with modules for Sign Up & Login, Reservations, Chatbot, and innovative components like dual deployment, email notifications, and regular data refresh.
+A serverless Restaurant Table Reservation App for Halifax restaurants, on the cloud, using GCP & AWS services, for scalability, security, and cost-efficiency. Featuring Customer, Partner, and Admin apps with modules for Sign Up & Login, Reservations, Chatbot, and innovative components like dual deployment, email notifications, and regular data refresh.
 
 Cloud Deployment Model: **Multi-Cloud** [AWS, GCP]
 
@@ -48,7 +48,7 @@ Deployment URL:
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![NPM-Package Manager](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-## Application Archietcture:
+## Application Architecture:
 ![Application Architecture](/image-assets/application-architecture.png)
 
 
@@ -57,14 +57,14 @@ This project is a Restaurant table reservation application tailored for Halifax,
 
 ## Application Components:
 1. **Customer App:** This application is designed for **customers** to view restaurant information, its menu items, and reserve tables at restaurants.
-2. **Partner App:** Restaurants **Owners/Partners** will utilize this application to manage restaurant and menu item attributes, and access their table reservtions/booking information.
+2. **Partner App:** Restaurants **Owners/Partners** will utilize this application to manage restaurant and menu item attributes and access their table reservations/booking information.
 3. **Admin App:** Super **admins** will utilize this application to oversee and analyze the overall usage and performance of the platform.
 
 ## Essential Layers:
 
 1. **Frontend:** Developed using React, Vite, and Chakra UI to create a responsive and visually appealing web application.
 
-2. **Backend Services:** Utilizing serverless solutions such as AWS Lambda, and GCP Cloud Functions for seamless and efficient tasks management.
+2. **Backend Services:** Utilizing serverless solutions such as AWS Lambda, and GCP Cloud Functions for seamless and efficient task management.
 
 3. **Database:**  
     a. **Dynamic Content** (GCP Firestore): Utilizing Firestore, a flexible NoSQL database provided by Google Cloud Platform, for managing dynamic content like real-time updates of restaurant and reservation data.
@@ -86,11 +86,11 @@ This project is a Restaurant table reservation application tailored for Halifax,
 ## Development Workflow and Practices:
 1. **Version Control**: Collaborative development is facilitated through version control systems like Git, enabling efficient teamwork and code management.
 2. **CI/CD Pipelines**: Utilizing Continuous Integration/Continuous Deployment (CI/CD) pipelines for seamless and automated deployment in stages, streamlining the development process.
-3. **Agile software development**: Regular commits to Git repositories on a weekly basis. Sprint duration is 4 weeks. 
+3. **Agile software development**: Regular commits to Git repositories every week. The sprint duration is 4 weeks. 
 
 
 ## Feature Components/Modules:
-High-level overview of the various feature components categorized under the respective user applications, outlining different sprints for task completion.
+A high-level overview of the various feature components categorized under the respective user applications, outlining different sprints for task completion.
 
 ### Customer App 
 1. Sign Up & Login Module: 
@@ -99,31 +99,31 @@ High-level overview of the various feature components categorized under the resp
 
 2. List of all Restaurants 
     * View all restaurants filtered by opening and closing hours
-    * Display Restaurant homepage with all restaurant attributes
-    * View menu item details of restaurants on homepage 
+    * Display the Restaurant homepage with all restaurant attributes
+    * View menu item details of restaurants on the homepage 
     * Display maximum discounted offer banner on restaurant pages.
 
 3. Book, edit, delete, view a reservation
-    * Book a reservation based on restaurant's opening and closing hours
+    * Book a reservation based on the restaurant's opening and closing hours
     * View customer bookings
     * Edit bookings (condition: allowed only 1 hour before the reservation time)
     * Delete bookings (condition: allowed only 1 hour before the reservation time)
 
 4. Book, edit, delete, view menu for a reservation
-    * Display menu items based on its current availability in restaurant  
+    * Display menu items based on their current availability in the restaurant  
     * Reserve a table without ordering any menu item from the restaurant menu
 
 5. Chatbot
-    * Interact and display Restaurant availability time, location, menu availabiliy information.
+    * Interact and display Restaurant availability time, location, and menu availability information.
     * Display reservation availability.
-    * Submit review about restaurant and/or its menu items
+    * Submit a review about the restaurant and/or its menu items
     * Book a reservation
 
 6. Notifications
     * Notify customer when a new Restaurant is opened (condition: every 1 hour)
     * Notify customer about successful reservation (condition: before 30 minutes of reservation time)
-    * Notify customer about menu item changes if any done by restaurant
-    * Notify customer about restaurant's closure due to special reasons.
+    * Notify customer about menu item changes if any done by the restaurant
+    * Notify customers about the restaurant's closure due to special reasons.
 
 ### Partner App
 1. Sign Up & Login Module
@@ -131,27 +131,27 @@ High-level overview of the various feature components categorized under the resp
     * Using Google Single Sign-On
 
 2. Restaurant details and add, view and edit menu items
-    * Add/Create a new restarant under Partner
+    * Add/Create a new restaurant under Partner
     * Add restaurant availability, open time, close time, reservation table capacity, and other restaurant attributes.
     * Edit existing restaurant attributes. 
     * Declare open or closed status of restaurant by partner
-    * Upload and update image of Restaurant banner & Menu items
+    * Upload and update the image of the Restaurant banner & Menu items
     * Edit and Delete menu item attributes
-    * Provide/Apply offers at restaurant level or menu-item level. 
-    * Apply menu-item specific discount percentage
-    * Display offer type specific slashed prices for each menu item.
+    * Provide/Apply offers at the restaurant level or menu-item level. 
+    * Apply menu-item-specific discount percentage
+    * Display offer type-specific slashed prices for each menu item.
 
 3. View, edit, and delete a reservation
-    * View bookings made by customer
+    * View bookings made by the customer
     * Edit or delete bookings (condition: 1 hour before reservation time)
     * Approve/Reject reservation
 
 4. Holistic View
-    * View number of tables booked in intervals daily, weekly, and monthly views
+    * View the number of tables booked in intervals daily, weekly, and monthly views
 
 5. Chatbot
-    * Get booking information for day/week/month, open time, and other restaurant atributes.
-    * Edit restaurant level attributes
+    * Get booking information for day/week/month, open time, and other restaurant attributes.
+    * Edit restaurant-level attributes
     * Read ratings, cancel or edit a reservation with menu items.
 
 6. Notifications
@@ -216,7 +216,7 @@ _Figure : reserve table flowchart_
 
 _Figure : Edit restaurant, menu items functionality & image upload flow chart_
 
-#### 5. Add, Remove menu-items 
+#### 5. Add, Remove menu items 
 
 ![Add, Remove menu-items-1](/image-assets/add-menu-item.png)
 
